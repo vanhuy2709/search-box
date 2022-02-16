@@ -55,7 +55,8 @@ body {
             width: 1.375rem;
             height: 1.375rem;
             margin: 1.063rem 1rem;
-            opacity: 0.54;
+            color: #281A51;
+            transition: 0.1s all;
             cursor: pointer;
         }
         
@@ -67,6 +68,24 @@ body {
             padding: 1rem 3rem;
             flex-basis: 70%;
             font-family: 'Poppins', sans-serif;
+            transition: 0.3s all;
+
+            &:hover {
+                border: 1px solid #281A51;
+            }
+
+            &:focus {
+                padding: 1rem 1.5rem;
+                border: 1px solid #281A51;
+            }
+
+            &:focus + .icon-search {
+                color: transparent;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
         }
     
         .btn-use {
